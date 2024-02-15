@@ -229,7 +229,7 @@ body {
 
 
     a:hover {
-        font-size:1.5rem;
+        color:#3d1c79;
     }
 
     svg {
@@ -241,6 +241,74 @@ body {
 .main-content {
     background:#e2e8f0;
     grid-area: main-content;
+    display:grid;
+    grid-template-columns: 2.5fr 1fr;
+    padding: 32px 24px;
+    gap:32px;
+
+
+    .projects {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr 1fr 1fr;
+        gap:8px;
+        column-gap:16px;
+
+        >:first-child{
+            grid-column: 2 span;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .project {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 24px;
+            padding:32px;
+            display:grid;
+            grid-template-rows: auto auto 1fr;
+
+
+            >:first-child{
+                font-weight: bold;
+            }
+
+            .tools {
+                margin-top:16px;
+                display:grid;
+                grid-template-columns: auto auto auto;
+                gap:16px;
+                justify-content: end;
+                align-content: end;
+
+                svg {
+                    height:32px;
+                }
+            }
+        }
+    }
+
+    .projects:first-child {
+        
+    }
+
+    .feed {
+        display:grid;
+        grid-template-rows: auto 1fr auto 1fr;
+        gap:8px;
+
+        div {
+            background: white;
+            border-radius: 10px;
+            margin-bottom:24px;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+    }
 
 }
 
