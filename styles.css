@@ -81,7 +81,8 @@ a {
 
 body {
     display:grid;
-    grid-template-columns: 1fr 3.75fr;
+    font-family: 'Montserrat';
+    grid-template-columns: minmax(250px,1fr) minmax(920px,3.75fr);
     grid-template-rows: 1fr 4.7fr;
     grid-template-areas: 
     "sidebar header"
@@ -93,6 +94,93 @@ body {
 .header {
     background:#ffffff;
     grid-area: header;
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    padding:16px 48px;
+    align-items: center;
+    gap:32px;
+
+    .search {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap:16px;
+    
+        img {
+            width: 28px;
+        }
+        
+        input {
+            border:none;
+            background: #cbd5e1;
+            border-radius: 12px;
+            padding-left:8px;
+            outline-color: #9ca3af;
+        }
+    }
+
+    .welcomeUser {
+        display:grid;
+        grid-template-columns: auto 1fr;
+        column-gap:32px;
+        align-items: start;
+        font-size: 1.5rem;
+        font-weight: bold;
+
+        img {
+            height:80px;
+            width: 80px;
+            border-radius: 50px;
+            grid-row: span 2;
+        }
+        :nth-child(2) {
+            align-self: self-end;
+            font-size:1rem;
+        }
+    }
+
+    .cornerMenu {
+        display:grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows:1fr;
+        justify-content: flex-end;
+        align-items: center;
+        gap:0 16px;
+
+        
+        img {
+            height:60px;
+            width: 60px;
+            border-radius: 50px;
+            grid-row: span 2;
+        }
+        :first-child {
+            height:30px;
+            width: 30px;
+        }
+
+
+    }
+
+    .header-options {
+        display:grid;
+        gap:16px;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        button {
+            border:none;
+            background:#1992d4;
+            border-radius: 20px;
+            padding: 8px 24px;
+            color:white;
+            font-weight: bold;
+        }
+
+        button:hover {
+            cursor: pointer;
+            background:#155679;
+        }
+    }
+
 }
 
 .sidebar {
@@ -103,16 +191,50 @@ body {
     grid-area: sidebar;
     color:#d9ecf7;
     font-weight: bold;
-    font-family: 'Montserrat';
     padding:32px;
 
     >* {
         display:grid;
         gap:16px;
+        
     }
 
+    .sidebar-options1, .sidebar-options2{
+
+        div {
+            display:grid;
+            grid-template-columns: auto 1fr;
+            gap:16px;
+            align-items: center;
+        }
+    }
+
+    .logo {
+        display:grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        gap:16px;
+
+        h2{
+            font-size:1.8rem;
+        }
+    }
+
+
+
+    a{
+        font-size:1.4rem;
+    }
+
+
+
     a:hover {
-        font-size:17px;
+        font-size:1.5rem;
+    }
+
+    svg {
+        height: 1.5rem;
+        fill:#e2e8f0;
     }
 }
 
