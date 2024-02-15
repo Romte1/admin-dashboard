@@ -153,7 +153,7 @@ body {
             border-radius: 50px;
             grid-row: span 2;
         }
-        :first-child {
+        >:first-child {
             height:30px;
             width: 30px;
         }
@@ -229,7 +229,8 @@ body {
 
 
     a:hover {
-        color:#3d1c79;
+        color:black;
+        transition: 0.3s;
     }
 
     svg {
@@ -267,6 +268,7 @@ body {
             padding:32px;
             display:grid;
             grid-template-rows: auto auto 1fr;
+            border-left:5px solid #fde047;
 
 
             >:first-child{
@@ -288,24 +290,53 @@ body {
         }
     }
 
-    .projects:first-child {
-        
-    }
 
     .feed {
         display:grid;
         grid-template-rows: auto 1fr auto 1fr;
         gap:8px;
 
-        div {
+        .feedAnnouncements, .feedAccounts {
             background: white;
             border-radius: 10px;
             margin-bottom:24px;
+            padding:16px 32px;
         }
 
-        p {
+        >p {
             font-size: 18px;
             font-weight: bold;
+        }
+
+        .feedAccounts {
+            display:grid;
+            font-size: 14px;
+
+            div {
+                display:grid;
+                grid-template-columns: auto 1fr;
+                grid-template-rows: 1fr 1fr;
+                column-gap:16px;
+                align-items: center;
+
+                img {
+                    grid-row: span 2;
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 50px;
+
+                }
+
+                >:nth-child(2) {
+                    align-self: end;
+                    font-weight: 500;
+                }
+                >:nth-child(3){
+                    align-self:start;
+                    color:#71717a;
+                    font-weight: 500;
+                }
+            }
         }
 
     }
