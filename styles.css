@@ -113,7 +113,7 @@ body {
             border:none;
             background: #cbd5e1;
             border-radius: 12px;
-            padding-left:8px;
+            padding-left:16px;
             outline-color: #9ca3af;
         }
     }
@@ -131,6 +131,7 @@ body {
             width: 80px;
             border-radius: 50px;
             grid-row: span 2;
+            object-fit: cover;
         }
         :nth-child(2) {
             align-self: self-end;
@@ -152,6 +153,7 @@ body {
             width: 50px;
             border-radius: 50px;
             grid-row: span 2;
+            object-fit: cover;
         }
         >:first-child {
             height:30px;
@@ -168,7 +170,7 @@ body {
 
         button {
             border:none;
-            background:#1992d4;
+            background:#9d174d;
             border-radius: 20px;
             padding: 8px 24px;
             color:white;
@@ -177,7 +179,8 @@ body {
 
         button:hover {
             cursor: pointer;
-            background:#155679;
+            background:#0d9488;
+            transition: 0.3s;
         }
     }
 
@@ -187,7 +190,7 @@ body {
     display:grid;
     align-content: start;
     gap:48px;
-    background: #1992d4;
+    background: #9d174d;
     grid-area: sidebar;
     color:#d9ecf7;
     font-weight: bold;
@@ -246,6 +249,7 @@ body {
     grid-template-columns: 2.5fr 1fr;
     padding: 32px 24px;
     gap:32px;
+    
 
 
     .projects {
@@ -268,7 +272,8 @@ body {
             padding:32px;
             display:grid;
             grid-template-rows: auto auto 1fr;
-            border-left:5px solid #fde047;
+            border-left:5px solid #4338ca;
+            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 
 
             >:first-child{
@@ -311,6 +316,7 @@ body {
         .feedAccounts {
             display:grid;
             font-size: 14px;
+            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 
             div {
                 display:grid;
@@ -324,6 +330,7 @@ body {
                     width: 48px;
                     height: 48px;
                     border-radius: 50px;
+                    object-fit: cover;
 
                 }
 
@@ -336,6 +343,33 @@ body {
                     color:#71717a;
                     font-weight: 500;
                 }
+            }
+        }
+
+        .feedAnnouncements {
+            padding:32px 32px;
+            display:grid;
+            grid-template-rows: auto auto 1fr;
+            gap:16px;
+            font-size: 14px;
+            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+
+            div {
+                border-bottom: 2px solid rgb(197, 191, 191);
+                place-self: start;
+                padding-bottom: 16px;
+                width:100%;
+                
+
+                >:first-child {
+                    font-weight: bold;
+                    font-size: 15px;
+                }
+
+
+            }
+            :last-child {
+                border:none;
             }
         }
 
